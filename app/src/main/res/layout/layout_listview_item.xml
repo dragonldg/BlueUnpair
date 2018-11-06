@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:item="http://schemas.android.com/apk/res-auto">
+    <data class="ListItemBinding">
+        <import type="android.text.Html"/>
+        <variable
+            name="device"
+            type="android.bluetooth.BluetoothDevice"/>
+    </data>
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <TextView
+            android:id="@+id/device_name"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="@{@string/device_name(device.name)}"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            item:layout_constraintLeft_toLeftOf="parent"
+            item:layout_constraintRight_toRightOf="parent"
+            item:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="@{Html.fromHtml(@string/device_addr(device.address))}"
+            android:gravity="center"
+            item:layout_constraintLeft_toLeftOf="parent"
+            item:layout_constraintRight_toRightOf="parent"
+            item:layout_constraintTop_toBottomOf="@+id/device_name"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">配对清空</string>
+
+    <string name="device_name">设备名称：%1$s</string>
+    <string name="device_addr">&lt;font color="#00000000">Mac地址：&lt;/font>%1$s</string>
+</resources>
